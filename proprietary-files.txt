@@ -329,6 +329,170 @@ etc/firmware/cpp_firmware_v1_6_0.fw
 etc/firmware/cpp_firmware_v1_8_0.fw
 etc/firmware/cpp_firmware_v1_10_0.fw
 
+# Camera Firmware
+vendor/firmware/companion_2l1_master_setfile.bin
+vendor/firmware/companion_2l1_master_setfile_d.bin
+vendor/firmware/companion_2l1_mode_setfile.bin
+vendor/firmware/companion_2l1_mode_setfile_d.bin
+vendor/firmware/companion_fw_2l1.bin
+vendor/firmware/companion_fw_2l1_d.bin
+vendor/firmware/companion_fw_imx260.bin
+vendor/firmware/companion_fw_imx260_d.bin
+vendor/firmware/companion_imx260_master_setfile.bin
+vendor/firmware/companion_imx260_master_setfile_d.bin
+vendor/firmware/companion_imx260_mode_setfile.bin
+vendor/firmware/companion_imx260_mode_setfile_d.bin
+vendor/firmware/fimc_is_fw2_2l1.bin
+vendor/firmware/fimc_is_fw2_2l1_d.bin
+vendor/firmware/fimc_is_fw2_imx260.bin
+vendor/firmware/fimc_is_fw2_imx260_d.bin
+vendor/firmware/mfc_fw.bin
+vendor/firmware/ois_fw_dom.bin
+vendor/firmware/ois_fw_sec.bin
+vendor/firmware/seiren_fw_dram.bin
+vendor/firmware/seiren_fw_sram.bin
+vendor/firmware/setfile_2l1.bin
+vendor/firmware/setfile_2l1_d.bin
+vendor/firmware/setfile_4e6.bin
+vendor/firmware/setfile_4e6_d.bin
+vendor/firmware/setfile_imx260.bin
+vendor/firmware/setfile_imx260_d.bin
+
+# DRM - Widevine
+bin/move_widevine_data.sh
+vendor/bin/hw/android.hardware.drm@1.1-service.widevine
+vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
+vendor/lib/libwvhidl.so
+vendor/lib/mediadrm/libwvdrmengine.so
+
+# GNSS
+etc/init/init.gpscommon.rc:vendor/etc/init/init.gpscommon.rc
+lib/libfloatingfeature.so:vendor/lib/libfloatingfeature.so
+lib/vendor.samsung.hardware.gnss@1.0.so:vendor/lib/vendor.samsung.hardware.gnss@1.0.so
+lib64/libfloatingfeature.so:vendor/lib64/libfloatingfeature.so
+lib64/vendor.samsung.hardware.gnss@1.0.so:vendor/lib64/vendor.samsung.hardware.gnss@1.0.so
+vendor/bin/hw/gpsd
+vendor/bin/hw/vendor.samsung.hardware.gnss@1.0-service
+vendor/etc/init/init.gps.rc
+vendor/etc/init/vendor.samsung.hardware.gnss@1.0-service.rc
+vendor/etc/gnss/gps.cer
+vendor/etc/gnss/gps.xml
+vendor/lib/libwrappergps.so
+vendor/lib64/libflicker.so
+vendor/lib64/libwrappergps.so
+vendor/lib64/hw/android.hardware.gnss@1.1-impl.so
+vendor/lib64/hw/gps.default.so
+vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so
+
+# Graphics
+vendor/lib/egl/libGLES_mali.so
+vendor/lib64/egl/libGLES_mali.so
+
+# LPM - from N975FXXU6ETLL
+bin/lpm|7a1e0b9854b6259e88cc74ab1e7f0c6b3a3827ab
+lib64/libmaet.so|ec9939dbe9576a9ab3c27c0300d82809ab630cc1
+lib64/libsxqk_skia.so|3ff0105b643964f4da14ed18c071a76b5868ae7c
+
+# LPM
+media/battery_error.spi
+media/battery_low.spi
+media/battery_temperature_error.spi
+media/battery_temperature_limit.spi
+media/battery_water_usb.spi
+media/charging_New_Fast.spi
+media/charging_New_Normal.spi
+media/dock_error_usb.spi
+media/incomplete_connect.spi
+media/lcd_density.txt
+media/percentage.spi
+media/safety_timer_usb.spi
+media/slow_charging_usb.spi
+media/temperature_limit_usb.spi
+media/water_protection_usb.spi
+
+# Neural Networks
+vendor/bin/hw/android.hardware.neuralnetworks@1.1-service-armnn
+vendor/etc/init/android.hardware.neuralnetworks@1.1-service-armnn.rc
+
+# NFC
+vendor/etc/nfc/sec_s3nrn81_rfreg.bin
+vendor/firmware/nfc/sec_s3nrn81_firmware.bin
+
+# Protobuf vendor variant - from N975FXXU6ZTK6
+vendor/lib/libprotobuf-cpp-full-3.9.1.so|4290c27525874cb687d072dcfe20244e65685f2a
+vendor/lib64/libprotobuf-cpp-full-3.9.1.so|b9613d7b25ffd6ab31f7aa32a904aa6f5f4f9cdf
+
+# Radio - RIL
+vendor/etc/init/init.vendor.rilchip.rc
+
+# Radio - RIL - from N975FXXU6ETLL
+vendor/bin/cbd|aae9a11fefb25f0293aa7da714a093d5f017d826
+vendor/bin/hw/rild|c77d17bde3312077a77a3a8238a62e649a996f44
+vendor/etc/mtu-conf.xml|0f17947b42293684e25db2cf97027c7deed66a31
+vendor/etc/pdpcnt-conf.xml|914a3ec45c2f82cca4355b4736e617e1ee644fbe
+vendor/lib/libengmode_client.so|38b95cf93d0c1f497e1d8a6370e53b903bb03510
+vendor/lib/libril.so|3e64e6fa4078d892d2c83b21edd1632bcf7fd827
+vendor/lib/libsec-ril-dsds.so|1bf5ba8954f7d0b8fc13b71aa4df7aa0bb0fa5ae
+vendor/lib/libsec-ril.so|5888ae1363fdb0ba5ec9e02df0cd1a12d64e6184
+vendor/lib/libsec_semRil.so|0e098bc1099a8cb466e29b2918c8968d214fb56c
+vendor/lib/libsecnativefeature.so|268dfdbb80196ac0d16abcce9109f87518753361
+vendor/lib/libsecril-client.so|af77c32b35ab1a2b7ee5f38e529e7eb8dee0a195
+vendor/lib/libsemnativecarrierfeature.so|7aeaf1049ffa3718eb4beed0739624c0cb4c9847
+vendor/lib/libvkmanager_vendor.so|9227ca82047d99fbe3a6ffdf203e41b862e48691
+vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so|c130cf05828ee1e415cf5823f2a67e023508f710
+vendor/lib/vendor.samsung.hardware.radio.channel@2.0.so|8f1ef76608e97b5864e30ea2f2aff2f685eb4d8e
+vendor/lib/vendor.samsung.hardware.radio@2.0.so|1c976df4082e7829578a9cb48c040706e1753a6d
+vendor/lib/vendor.samsung.hardware.radio@2.1.so|6ce633e09b82f54aabd789ca23a5f1833a232f68
+vendor/lib64/libengmode_client.so|ac3615bb78e4e569841abd804c0278c6de181b2c
+vendor/lib64/libril.so|d81e76523a5a28fdf488fa42c0e1d4a2b15fff19
+vendor/lib64/libsec-ril-dsds.so|ddc49c92278ba494d7d5c1362db91fb981952982
+vendor/lib64/libsec-ril.so|f1934f7303c5f3b3c11c3726b271c376f66720c4
+vendor/lib64/libsec_semRil.so|7987ec9be7bf937438c43fc0b9859f6c9b4b5787
+vendor/lib64/libsecnativefeature.so|db918252c537272b99651bee58e6ab017549b623
+vendor/lib64/libsecril-client.so|86b71fb3fb1daa5bc5293d38779c528126e0cfa3
+vendor/lib64/libsemnativecarrierfeature.so|3a1058f01dd6a7663272fdba6a0ea53b9253f934
+vendor/lib64/libvkmanager_vendor.so|c251a0386644c03760148177047ddb0c437029e5
+vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so|ac01bab3a779374005bb6b94e8b354107671d5dc
+vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so|44d2173ab0187ec3460dd54135e2b406bc93b098
+vendor/lib64/vendor.samsung.hardware.radio@2.0.so|e9985c207ffec829a1746af29d45d9da1994805f
+vendor/lib64/vendor.samsung.hardware.radio@2.1.so|12953d8fe923094410dfa0ea983515b0b16e8eba
+
+# RIL
+vendor/etc/plmn_delta.bin
+vendor/etc/plmn_delta_chn.bin
+vendor/etc/plmn_delta_hktw.bin
+vendor/etc/plmn_se13.bin
+
+# Sensors
+lib/libhr.so:vendor/lib/libhr.so
+lib/libsensorlistener.so:vendor/lib/libsensorlistener.so
+lib64/libhr.so:vendor/lib64/libhr.so
+lib64/libsensorlistener.so:vendor/lib64/libsensorlistener.so
+vendor/bin/hw/lhd
+vendor/etc/sensor/lhd.conf
+vendor/etc/sensors/hals.conf
+vendor/lib/sensors.bio.so
+vendor/lib/sensors.grip.so
+vendor/lib/sensors.sensorhub.so
+vendor/lib64/sensors.bio.so
+vendor/lib64/sensors.grip.so
+vendor/lib64/sensors.sensorhub.so
+
+# Wifi
+vendor/bin/hw/macloader
+vendor/bin/hw/mfgloader
+vendor/etc/init/wifi.rc:vendor/etc/init/wifi_sec.rc
+vendor/etc/init/wifi_brcm.rc
+vendor/etc/wifi/bcmdhd_clm.blob
+vendor/etc/wifi/bcmdhd_ibss.bin_c0_plus_blob
+vendor/etc/wifi/bcmdhd_mfg.bin_c0_plus_blob
+vendor/etc/wifi/bcmdhd_sta.bin_c0_plus_blob
+vendor/etc/wifi/indoorchannel.info
+vendor/etc/wifi/nvram.txt_c0_plus
+vendor/etc/wifi/nvram.txt_murata_c0_plus
+vendor/lib/libwifi-hal.so
+vendor/lib64/libwifi-hal.so
+
 # Fingerprint
 bin/fingerprintd
 lib/hw/fingerprint.default.so
@@ -591,19 +755,19 @@ vendor/lib/libTimeService.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
 # Wifi
-bin/cnss-daemon
-bin/cnss_diag
-etc/wifi/bcmdhd_apsta.bin_b1
-etc/wifi/bcmdhd_apsta.bin_b90s_b1
-etc/wifi/bcmdhd_apsta.bin_c0
-etc/wifi/bcmdhd_ibss.bin_b1
-etc/wifi/bcmdhd_ibss.bin_b90s_b1
-etc/wifi/bcmdhd_ibss.bin_c0
-etc/wifi/bcmdhd_mfg.bin_b1
-etc/wifi/bcmdhd_mfg.bin_b90s_b1
-etc/wifi/bcmdhd_mfg.bin_c0
-etc/wifi/bcmdhd_mfg2.bin_b1
-etc/wifi/bcmdhd_mfg2.bin_b90s_b1
+vendor/bin/cnss-daemon
+vendor/bin/cnss_diag
+vendor/etc/wifi/bcmdhd_apsta.bin_b1
+vendor/etc/wifi/bcmdhd_apsta.bin_b90s_b1
+vendor/etc/wifi/bcmdhd_apsta.bin_c0
+vendor/etc/wifi/bcmdhd_ibss.bin_b1
+vendor/etc/wifi/bcmdhd_ibss.bin_b90s_b1
+vendor/etc/wifi/bcmdhd_ibss.bin_c0
+vendor/etc/wifi/bcmdhd_mfg.bin_b1
+vendor/etc/wifi/bcmdhd_mfg.bin_b90s_b1
+vendor/etc/wifi/bcmdhd_mfg.bin_c0
+vendor/etc/wifi/bcmdhd_mfg2.bin_b1
+vendor/etc/wifi/bcmdhd_mfg2.bin_b90s_b1
 etc/wifi/bcmdhd_mfg2.bin_c0
 etc/wifi/bcmdhd_sta.bin_b1
 etc/wifi/bcmdhd_sta.bin_b90s_b1
@@ -626,6 +790,10 @@ etc/wifi/nvram_net.txt_murata_c0
 etc/wifi/nvram_net.txt_wisol
 etc/wifi/nvram_net.txt_wisol_b1
 etc/wifi/nvram_net.txt_wisol_c0
+
+vendor/etc/wifi/bcmdhd_sta.bin
+vendor/etc/wifi/bcmdhd_apsta.bin
+vendor/etc/wifi/nvram.txt
 
 # Unknown
 vendor/lib/libmm-disp-apis.so

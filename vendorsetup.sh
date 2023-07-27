@@ -1,2 +1,0 @@
-add_lunch_combo lineage_hero2qlteue-eng
-add_lunch_combo lineage_hero2qlteue-userdebug

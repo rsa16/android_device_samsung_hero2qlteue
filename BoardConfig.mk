@@ -20,6 +20,7 @@ BOARD_VENDOR := samsung
 DEVICE_PATH := device/samsung/hero2qlteue
 
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/hero2qlteue/include
+TARGET_FS_CONFIG_GEN += $(DEVICE_PATH)/config.fs
 
 # Architecture
 TARGET_ARCH := arm64
@@ -29,7 +30,6 @@ TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := kryo
 
 TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv7-a-neon
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
@@ -54,9 +54,14 @@ BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_CONFIG := lineage_hero2qltue_defconfig
+TARGET_KERNEL_CONFIG := lineage_hero2qlteue_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/msm8996
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+
+# Shims
+TARGET_LD_SHIM_LIBS += \
+    /vendor/lib/libbauthserver.so|/vendor/lib/libbauthtzcommon_shim.so \
+    /vendor/lib64/libbauthserver.so|/vendor/lib64/libbauthtzcommon_shim.so
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8996
@@ -112,10 +117,11 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
 # CM Hardware
-BOARD_HARDWARE_CLASS += \
-    hardware/cyanogen/cmhw \
-    $(DEVICE_PATH)/cmhw
-BOARD_USES_CYANOGEN_HARDWARE := true
+#BOARD_HARDWARE_CLASS += \
+#    hardware/cyanogen/cmhw \
+#    $(DEVICE_PATH)/cmhw
+#BOARD_USES_CYANOGEN_HARDWARE := true
+
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
 # CNE and DPM
@@ -192,12 +198,20 @@ PROTOBUF_SUPPORTED := true
 TARGET_RIL_VARIANT := caf
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
+include device/qcom/sepolicy/SEPolicy.mk
 
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
+# Shims
+TARGET_LD_SHIM_LIBS += \
+    /vendor/lib/libbauthserver.so|/vendor/lib/libbauthtzcommon_shim.so \
+    /vendor/lib64/libbauthserver.so|/vendor/lib64/libbauthtzcommon_shim.so
+
 # Sensors
 USE_SENSOR_MULTI_HAL := true
+
+# Fingerprint
+TARGET_SEC_FP_USES_PERCENTAGE_SAMPLES := true
 
 # Vendor init
 #TARGET_INIT_VENDOR_LIB := libinit_hero2qltechn
@@ -210,10 +224,11 @@ BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 BOARD_HOSTAPD_DRIVER        := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/bcmdhd/parameters/firmware_path"
-WIFI_DRIVER_FW_PATH_AP      := "/system/etc/firmware/fw_bcm4359_apsta.bin"
-WIFI_DRIVER_FW_PATH_P2P     := "/system/etc/firmware/fw_bcm4359.bin"
-WIFI_DRIVER_FW_PATH_STA     := "/system/etc/firmware/fw_bcm4359.bin"
+WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/dhd/parameters/firmware_path"
+WIFI_DRIVER_NVRAM_PATH_PARAM     := "/sys/module/dhd/parameters/nvram_path"
+WIFI_DRIVER_NVRAM_PATH           := "/vendor/etc/wifi/nvram.txt"
+WIFI_DRIVER_FW_PATH_STA          := "/system/vendor/etc/wifi/bcmdhd_sta.bin"
+WIFI_DRIVER_FW_PATH_AP           := "/system/vendor/etc/wifi/bcmdhd_apsta.bin"
 
 # Inherit from the proprietary version
 -include vendor/samsung/hero2qlteue/BoardConfigVendor.mk

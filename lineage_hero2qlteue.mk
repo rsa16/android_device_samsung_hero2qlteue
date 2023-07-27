@@ -26,7 +26,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/samsung/hero2qlteue/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_hero2qlteue
@@ -39,7 +39,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="hero2qlteue" \
-    PRODUCT_NAME="hero2qlte" \
+    PRODUCT_NAME="hero2qltexx" \
     BUILD_FINGERPRINT="samsung/hero2qlte/hero2qlteue:6.0.1/MMB29M/G9350ZHU2APK2:user/release-keys" \
     PRIVATE_BUILD_DESC="hero2qlte-user 6.0.1 MMB29M G9350ZHU2APK2 release-keys"
 
