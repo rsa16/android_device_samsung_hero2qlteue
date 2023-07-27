@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 The CyanogenMod Project
+ * Copyright (C) 2016 The LineageOS Project
  *           (C) 2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,11 +15,11 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.settings.device;
+package com.lineageos.settings.device;
 
 import android.os.Bundle;
 
-import com.cyanogenmod.settings.device.utils.NodePreferenceActivity;
+import com.lineageos.settings.device.utils.NodePreferenceActivity;
 
 public class ButtonSettings extends NodePreferenceActivity {
     @Override

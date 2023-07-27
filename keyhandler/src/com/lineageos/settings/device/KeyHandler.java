@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.settings.device;
+package com.lineageos.settings.device;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -25,10 +25,10 @@ import android.view.KeyEvent;
 
 import com.android.internal.os.DeviceKeyHandler;
 
-import org.cyanogenmod.internal.util.FileUtils;
+import org.lineageos.internal.util.FileUtils;
 
-import cyanogenmod.hardware.CMHardwareManager;
-import cyanogenmod.providers.CMSettings;
+import lineageos.hardware.CMHardwareManager;
+import lineageos.providers.CMSettings;
 
 public class KeyHandler implements DeviceKeyHandler {
 

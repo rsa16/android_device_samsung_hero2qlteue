@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 The CyanogenMod Project
+ * Copyright (C) 2016 The LineageOS Project
  *           (C) 2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.settings.device;
+package com.lineageos.settings.device;
 
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
@@ -26,9 +26,9 @@ import android.util.Log;
 
 import java.io.File;
 
-import com.cyanogenmod.settings.device.utils.Constants;
+import com.lineageos.settings.device.utils.Constants;
 
-import org.cyanogenmod.internal.util.FileUtils;
+import org.lineageos.internal.util.FileUtils;
 
 public class Startup extends BroadcastReceiver {
 
@@ -37,7 +37,7 @@ public class Startup extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, final Intent intent) {
         final String action = intent.getAction();
-        if (cyanogenmod.content.Intent.ACTION_INITIALIZE_CM_HARDWARE.equals(action)) {
+        if (lineageos.content.Intent.ACTION_INITIALIZE_CM_HARDWARE.equals(action)) {
 
             // Disable button settings if needed
             if (!hasButtonProcs()) {

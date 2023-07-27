@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2016 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,7 +23,8 @@ LOCAL_PRIVILEGED_MODULE := true
 LOCAL_PACKAGE_NAME := ConfigPanel
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
-    org.cyanogenmod.platform.internal
+    org.lineageos.platform.internal \
+    org.lineageos.settings.resources
 
 LOCAL_AAPT_FLAGS := --auto-add-overlay
 
