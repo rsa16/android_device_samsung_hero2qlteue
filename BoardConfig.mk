@@ -197,6 +197,9 @@ BOARD_RIL_CLASS := ../../../$(DEVICE_PATH)/ril
 PROTOBUF_SUPPORTED := true
 TARGET_RIL_VARIANT := caf
 
+TARGET_USES_GRALLOC1 := true
+TARGET_USES_HWC2 := true
+
 # SELinux
 include device/qcom/sepolicy/SEPolicy.mk
 

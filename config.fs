@@ -26,9 +26,6 @@ caps: NET_BIND_SERVICE
 mode: 0755
 user: AID_SYSTEM
 group: AID_RADIO
-caps: NET_BIND_SERIVCE
+caps: NET_BIND_SERVICE
 
-[system/etc/fs_config_dirs]
-user: AID_ROOT
-group: AID_ROOT
 
